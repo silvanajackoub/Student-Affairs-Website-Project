@@ -1,0 +1,29 @@
+.main-nav {
+    background-color: #132666;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+nav>a{
+    color: white;
+    cursor: pointer;
+}
+nav>a:hover{
+    color: #d6e8ee;
+}
+.nav-link{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: larger;
+    text-decoration: none;
+}
+#first-link{
+    padding-left: 10%;
+}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="{% static 'css/home-sign-up.css'%}">
+        <Title>Sign Up</Title>
+    </head>
+    <body>
+        <section class="box2">
+            <h1>Sign Up</h1>
+            <form id="signup-form" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+
+                <input class="submit2" type="submit" value="Sign Up" id="signup-button">
+            </form>
+            <p>Have an account? <a href="{% url 'affairs-home' %}">Log in</a></p>
+        </section>
+    </body>
+</html>
+{% endblock content %}

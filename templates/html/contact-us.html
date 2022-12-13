@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/contact.css'%}">
+    <link rel="icon" href="{% static 'images/fcai-logo.png'%}">
+    <title>Contact_US</title>
+    <script src="{% static 'js/js_contact.js'%}"></script>
+</head>
+
+   
+    <div class="contact">
+        <form name="myForm" id="form" method="post">  
+            <!-- if we added an action attribute  action="NoFile.php" for example ,
+            when submitting the form the browser will declare that the file is not found-->
+            {% csrf_token %}
+            <p id="cn">Contact Us</p>
+            <input type="text" class="field" id="name" name="name" placeholder="Full Name" required>
+            <input type="email" class="field" id="email" name="email" placeholder="E-mail" required>
+            <input type="number" class="field" id="num" name="num" maxlength="13" placeholder="Your Phone Number" required>
+            <textarea class="field textfield" id="msg" name="msg"  placeholder="Your Message" required></textarea>
+            <input type="submit" id="sub" class="b" value="Submit">
+        </form>
+    </div>
+
+</body>
+</html>
+{% endblock content %}
