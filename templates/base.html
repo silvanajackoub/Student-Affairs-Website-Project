@@ -1,0 +1,26 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/navbar.css'%}">
+    <link rel="icon" href="{% static 'images/fcai-logo.png'%}">
+</head>
+<body>
+    <div>
+         <nav class="main-nav">
+            <a class="nav-link" href="{% url 'home'%}" id="first-link">HOME</a>
+            <a class="nav-link" href="{% url 'affairs-home' %}">LOGIN</a>
+            <a class="nav-link" href="{% url 'regist'%}">ADD STUDENT</a>
+            <a class="nav-link" href="{% url 'update'%}">EDIT STUDENT</a>
+            <a class="nav-link" href="{% url 'search'%}">SEARCH</a>
+            <a class="nav-link" href="{% url 'contact'%}">CONTACT US</a>
+        </nav>
+    </div>
+    {% block content %} 
+
+    {% endblock content %} 
+</body>
+</html>

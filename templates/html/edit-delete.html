@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Update Student</title>
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/updatecss.css'%}">
+        <script src="{% static 'js/js_updatej.js'%}"></script>
+        <link href='{% static 'css/trash.css' %}' rel='stylesheet'>
+    </head>
+    <body>
+        <section class="hide">
+            <form id="search-form" action="{% url 'update' %}" class="search" method="post">
+                {% csrf_token %}
+                <input type="text" placeholder="Search.." name="search" id="myInput">
+                <button type="submit" id="search-submit"><img alt="Search" width="20" height="20" src="{% static 'images/magnifying-glass-solid.png' %}"></button>
+            </form>
+        </section>
+
+        <form action="{% url 'update' %}" id="filter-form" class="searchoptionsform hide" method="post">
+            {% csrf_token %}
+            <div class="searchoptions">
+                <label for="filter">Filter by:</label>
+                <select id="filter" name="filterVal">
+
+                    <optgroup label="StudentLevel">
+                        <option value="1">Level 1</option>
+                        <option value="2">Level 2</option>
+                        <option value="3">Level 3</option>
+                        <option value="4">Level 4</option>
+                    </optgroup>
+
+                    <optgroup label="System">
+                        <option value="MainStream">MainStream</option>
+                        <option value="Credit">Credit</option>
+                    </optgroup>
+
+                    <optgroup label="Department">
+                        <option value="General MainStream">General</option>
+                        <option value="CS MainStream">Computer Science</option>
+                        <option value="IS MainStream">Information System</option>
+                        <option value="AI MainStream">Artificial Intelligence</option>
+                        <option value="IT MainStream">Information Technology</option>
+                        <option value="DS MainStream">Decision Support </option>
+                        <option value="SE Credit">Software Engineering</option>
+                        <option value="CS Credit">Cyber security</option>
+                        <option value="DS Credit">Data science</option>
+                        <option value="BIO Credit">Bioinformatics</option>
+                    </optgroup>
+
+                    <optgroup label="Status">
+                        <option value="Active">Active</option>
+                        <option value="InActive">InActive</option>
+                    </optgroup>
+
+                </select>
+            </div>
+
+            <input type="submit" id="filter-apply" value="Apply" class="searchsubmit">
+
+        </form>
+
+
+
+
+        <section class="hide">
+
+            <table id="table">
+
+                <thead>
+                    <tr>
+                        <th class="narrow">No.</th>
+                        <th class="name">Student Name</th>
+                        <th class="wide">Student ID</th>
+                        <th class="narrow">Department</th>
+                        <th class="wide">Status</th>
+                        <th class="narrow">GPA</th>
+                        <th class="narrow"> Year</th>
+                        <th class="wide">System</th>
+                        <th></th>
+                
+                    </tr>
+                </thead>
+
+                <tbody>
+                {% for student in result %}
+                    <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ student.FullName|title }}</td>
+                    <td>{{ student.StudentID }}</td>
+                    <td>{{ student.Department }}</td>
+                    <td>{{ student.Status }}</td>
+                    <td>{{ student.Gpa }}</td>
+                    <td>{{ student.StudentLevel }}</td>
+                    <td>{{ student.System }}</td>
+                    <td><button class="button edit" onclick="openForm(this)">
+                        <img alt="Edit" src="{% static 'images/pen-to-square-solid.png' %}" width="28" height="28" class='fa fa-edit' style="font-size:30px; color: blue;">
+                    </button>
+                        <button onclick = "del_func(this)" class="button delete">
+                            <img width="28" height="28" alt="Delete" src="{% static 'images/trash-can-solid.png' %}"
+                                 class="fa fa-trash-o" style="font-size:30px;color:red"></button></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+        <section class="form-popup" id="myForm">
+            <form id="edit-form" class="form-container">
+              <h1>Update Student</h1>
+
+              <label><b>Student Name</b></label>
+              <input type="text" placeholder="Enter Student Name" name="Name" required>
+
+              <input type="hidden" placeholder="Enter Student ID" name="ID" required>
+
+              <label><b>Status</b></label>
+              <br>
+              <br>
+              <label class="switch">
+                <input type="checkbox" id="status-slider">
+                <span class="slider round"></span>
+              </label>
+
+              <br>
+              <br>
+
+              <label for="level-select"><b>StudentLevel</b></label>
+              <select id="level-select">
+                  <option value="1">Level 1</option>
+                  <option value="2">Level 2</option>
+                  <option value="3">Level 3</option>
+                  <option value="4">Level 4</option>
+              </select>
+          
+              <label><b>Student GPA</b></label>
+              <input id="gpa" name="GPA" type="number" placeholder="Enter GPA"  required   value="3" step="0.01" max="4" min="0"  >
+
+              <label><b>System</b></label>
+              <select id="system-select">
+                <option>MainStream</option>
+                <option>Credit</option>
+            </select>
+                <br>
+                <br>
+              <button type="submit" id="edit-submit">Update</button>
+              <button type="button" onclick="closeForm()">Close</button>
+            </form>
+        </section>
+        <input type="hidden" name="del-url" value="{% url 'del_student' %}">
+        <input type="hidden" name="edit-url" value="{% url 'edit_student' %}">
+        <input type="hidden" name="this-page-url" value="{% url 'update' %}">
+    </body>
+
+</html>
+{% endblock content %}

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/dept-style.css'%}">
+    <link rel="icon" href="{% static 'images/fcai-logo.png'%}">
+    <script src="{% static 'js/js_assign_dept.js'%}"></script>
+    <title>Assign Department</title>
+ </head>
+<body>
+
+
+<main>
+    <section>
+        <article class="container" id="name-article">
+          Name: {{ student.FullName|title }}
+      </article>
+      <article class="container" id="id-article">
+          ID: {{ student.StudentID }}
+      </article>
+    </section>
+	<form method="POST" action="{% url 'dept' %}" id="dept-form">
+        {% csrf_token %}
+  <label for="department">Department : </label>
+  <select name="department" id="department">
+      <optgroup label="MainStream">
+          <option value="General">General</option>
+          <option value="CS">Computer Science</option>
+          <option value="IS">Information System</option>
+          <option value="AI">Artificial Intelligence</option>
+          <option value="IT">Information Technology</option>
+          <option value="DS">Decision Support </option>
+      </optgroup>
+
+      <optgroup label="Credit">
+        <option value="SE">Software Engineering</option>
+        <option value="CS">Cyber security</option>
+        <option value="DS">Data science</option>
+        <option value="BIO">Bioinformatics</option>
+
+      </optgroup>
+  </select>
+  <br><br>
+        <input type="hidden" name="student_id" value="{{ student.StudentID }}">
+        <input type="hidden" name="stud_system" value="{{ student.System }}">
+     <button type="submit" id="dept-submit">
+      <span>Submit</span>
+    </button>
+  </form>
+</main>
+
+</body>
+</html>
+{% endblock content %}

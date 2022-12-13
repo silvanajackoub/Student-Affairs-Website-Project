@@ -1,0 +1,286 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/home.css'%}">
+        <title>Faculty of Computers and Artifical Intelligence</title>
+        <link rel="icon" href="{% static 'images/fcai-logo.png'%}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+   
+
+    <body id="main">
+
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!--header-->
+        <header>
+            <div>
+                <button class="openbtn" onclick="openNav()">
+                    <img src="{% static 'images/menu.png'%}" alt="Menu">
+                </button>
+                <img src="https://cu.edu.eg/ar/images/demo/slideshow/img1.png" alt="Cairo University"/>
+                <span>Cairo University</span>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-facebook"></a>  
+            </div>
+
+
+            <article>
+                <div class="faculty">
+                    <img src="{% static 'images/fcai-logo.png'%}" alt="FCAI-CU"/>
+                    <h1>Faculty of  Computers <br> and Artifical Intelligence</h1>
+                </div>
+            
+                <div class="contact-conatiner">
+                    <div class="contact">   
+                        <br> <br>
+                        <i class="material-icons">call</i>
+                        <p>Call Us <br> 01xxxxxxxxx </p>
+                    </div>
+                    <div class="contact" style="width:14%">  
+                        <i class="material-icons">mail_outline</i>
+                        <p>Email Us <br> xxxxxxxxx@fci.cu.edu.com </p>
+                    </div>
+                    <div class="contact">   
+                        <i class="material-icons">place</i>
+                        <p>Locate Us <br><a href="https://goo.gl/maps/PXgqaTXnBZxavXYbA" target="blank"> Location </a> </p>
+                    </div>
+                </div>
+            </article>
+        </header>
+        
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!--navigation bar-->
+        <nav>
+            <a href="#hr">  Human Resources </a> 
+            <a href="{% url 'affairs-home' %}"> Students Affairs </a>
+            <a href="#hs"> Higher Studies </a> 
+            <a href="#lt"> Laboratory Tracking </a> 
+        </nav>
+        
+
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!--main-->
+        <main>
+            <div>
+                <p>
+                    WELCOME <br>TO OUR FACULTY
+                </p>
+                <a href="https://fci.cu.edu.eg/userfiles/esdf.rar" download>
+                    Learn More &#8250;&#8250;
+                </a>
+                <div class="mainpanels leftmainpanel">
+                    <p>What's New </p>
+                    <a href="https://fci.cu.edu.eg/ar/Home" target="blank">Click here</a>
+                </div>
+                <div class="mainpanels">
+                    <p> Student Portal </p>
+                    <a href="http://newecom.fci-cu.edu.eg/#/" target="blank">Click here</a>
+                </div>
+                <div class="mainpanels">
+                    <p> Courses Portal </p>
+                    <a href="https://cu.blackboard.com/" target="blank">Click here</a>
+                </div>
+            </div>
+        </main>
+        
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!--sidebar-->
+        <aside id="mySidebar">
+
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <h2> Quick Access</h2>
+            <a href=""> Human <br> Resources</a>
+            <ul>
+                <li> <a href="">Add Employee </a> </li>
+                <li> <a href="">Update Employee </a> </li>
+                <li> <a href="">Search Employess </a> </li>
+                <li> <a href="">Submitted Vacations </a> </li>
+                <li> <a href="">Contact Us </a> </li>
+            </ul>
+            <br><br>
+            <a href=""> Student <br> Affairs</a>
+            <ul>
+                <li> <a href="{% url 'affairs-home' %}">Login Page</a> </li>
+                <li> <a href="{% url 'regist'%}">Add Student</a> </li>
+                <li> <a href="{% url 'update'%}">Update Student</a> </li>
+                <li> <a href="{% url 'search'%}">Search Students</a> </li>
+                <li> <a href="{% url 'contact'%}">Contact Us </a> </li>
+            </ul>
+            <br><br>
+            <a href=""> Higher <br> Studies</a>
+            <ul>
+                <li> <a href="">Add Student</a> </li>
+                <li> <a href="">Uddate Student</a> </li>
+                <li> <a href="">Add Course </a> </li>
+                <li> <a href="">View Students </a> </li>
+                <li> <a href="">Contact Us </a> </li>
+            </ul>
+            <br><br>
+            <a href=""> Laboratory <br> Tracking </a>
+            <ul>
+                <li> <a href="">Add Laboratory </a> </li>
+                <li> <a href="">Update Laboratory</a> </li>
+                <li> <a href="">Search Laboraotries </a> </li>
+                <li> <a href="">Report A Problem </a> </li>
+                <li> <a href="">View PCs </a> </li>
+                <li> <a href="">Add PC</a> </li>
+                <li> <a href="">Contact Us</a> </li>
+                <li> <a href=""> </a> </li>
+                <li> <a href=""> </a> </li>
+            </ul>
+
+
+        </aside>
+
+        <br>
+
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!--vision and mssion section-->
+        <section id="vismis">
+            <h2>Strategic Framework</h2>
+            <div class="vismis">
+                <article class="leftside sec white reveal left" style="transition: 2s;">
+                    <h3>Our Vision</h3>
+                    <p>
+                        <br>
+                        The faculty to be the best provider, locally and regionally, for academic teaching, sceintfifc and applied research in the fields of computation, informatics, and desicion support.
+                    </p>
+                </article>
+    
+                <article class="sec reveal left">
+                    <img src="{% static 'images/vision.png'%}" alt="Vision" style="width: 370px; height: 270px; margin-left: 50px; margin-top: 30px;"/>
+                </article>
+            </div>
+            <br>
+            <div class="vismis">
+            
+                <article class=" leftside sec reveal right">
+                    <img src="{% static 'images/mission.png'%}" alt="Mission" style="width: 250px; height: 250px; margin:10px 0 15px 100px; "/>
+                </article>
+                <article class="white sec reveal right" style="transition: 2s;">
+                    <h3>Our Mission</h3>
+                    <p style="margin: 25px;">
+                        The faculty of computers and artifical intelligence-Cairo university is comitted to introduce good education and scientific research to create highly competitive calibres in informatics, computation, and decsion support, moreover it will provide capacity building programs and introduce cosultancies and technical solution to support socail and economic development.  
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!--values section-->
+        <section id="values">
+            <h2>Core Values</h2>
+            <p class="values reveal right"> <br> Market Oriented </p>
+            <p class="values reveal right" style="transition: 2s;"><br> Accountability </p>
+            <p class="values reveal right" style="transition: 3s;"><br> Transparency </p>
+            <p class="values reveal right" style="transition: 4s;"><br> Competitveness </p>
+            <p class="values reveal right" style="transition: 5s;"><br> Academic Honesty </p>
+        </section>
+
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!--goals section-->
+        <section id="goals">
+            <h2>Goals</h2>
+            <p class="goals reveal left" style="transition: 3s;" >
+                To improve graduates' skills and increase the competitve abilites of students and researchers. 
+            </p>
+
+            <p class="goals reveal left" style="transition: 2s;"> 
+                Continous improvment of the abilities of staff members and teaching assistants.
+            </p>
+            <p class="goals reveal left">  
+                To provide standard enviroment and typical climate for educational and research processes. 
+            </p>
+            <br>
+            <p class="goals reveal right" style="transition: 4s;"> 
+                Developing, supporting, & utilizing sceintfifc research in supporting public and governmental services locally and regionally.
+            </p>
+            <p class="goals reveal right" style="transition: 5s;"> 
+                Supporting partnership relations and programs with civill society organiztions and enviromental development. 
+            </p>
+            <p class="goals reveal right" style="transition: 6s;"> 
+                Periodically applying quality standars and evalutaing institutional abililtes and educational effictivness. 
+            </p>
+        </section>
+
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!--webpages sections-->
+        <section id="hr">
+            <h2>Human Resources</h2>
+            <div class="content">
+                <article class="leftside sec reveal left">
+                    <img src="{% static 'images/hr.jpg'%}" alt="HR">
+                </article>
+    
+                <article class="sec reveal right">
+                    <p> Add a new employee to the system. Employee data should include id, name, email, address, phone number, gender, marital status, number of available vacation days, number of actual approved vacation days, salary, date of birth.</p>
+                    <a href="">Read more &#8250;&#8250;</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="sa">
+            <h2>Student Affairs</h2>
+            <div class="content">
+                <article class="leftside sec reveal left">
+                    <p> Develops, adopts, enforces, oversees, and/or implements policies and procedures on a range of student affairs issues such as class absences, refund appeals, and withdrawals. coordinates and enforces dean of students policies and procedures.</p>
+                    <a href="">Read more &#8250;&#8250;</a>
+                </article>
+    
+                <article class="sec reveal right">
+                    <img src="{% static 'images/student-affairs.png'%}" alt="Student Affairs">
+                </article>
+            </div>
+        </section>
+
+        <section id="hs">
+            <h2>Higher Studies</h2>
+            <div class="content">
+                <article class="leftside sec reveal left">
+                    <img src="{% static 'images/higher-studies.jpg'%}" alt="Higher Studies">
+                </article>
+    
+                <article class="sec reveal right">
+                    <p> Add a new student to the system. Student information includes id, name, date of birth, university, gender, department, status=”active”, “inactive”, course1, course2, course3. Course information includes id, department , course name, number of hours.</p>
+                    <a href="">Read more &#8250;&#8250;</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="lt">
+            <h2>Laboratory Tracking</h2>
+            <div class="content">
+                <article class="leftside sec reveal left">
+                    <p> Add a new laboratory. Laboratory information includes id, name, building number, floor number, number of PCs, capacity, number of chairs, status =” active” or "under maintenance". We help you to n report a problem in a specific laboratory after searching for it. </p>
+                    <a href="">Read more &#8250;&#8250;</a>
+                </article>
+
+                <article class="sec reveal right">
+                    <img src="{% static 'images/lab-track.png'%}" alt="Lab Track">
+                </article>
+            </div>
+        </section>
+        
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!--footer-->
+        <footer>
+            <p>
+                Copyright © 2004-2015 Faculty of Computers and Artificial Intelligence 5 Dr. Ahmed Zewail Street, Postal Code: 12613, Orman, Giza, Egypt.
+            </p>
+        </footer>
+
+
+        <script src="{% static 'js/js_home.js'%}"></script>
+    </body>
+
+</html>
