@@ -17,3 +17,49 @@ the student’s department assignment page.(applicable for students if level >= 
 6. View all active/inactive students in a separate page</br>
 
 
+Setting up the environment 🛠
+--------------------------
+
+#### 1. Make sure python v3.7 or higher is installed:
+
+console
+* To get the version Excute:
+
+```
+$ python --version
+Python 3.9.6
+```
+
+#### 2. Make Sure Git is installed:
+* To get the version Excute:
+```
+$ git --version
+git version 2.28.0.windows.1
+```
+
+#### 3. Execute the following commands in your terminal after changing your directory to the desired path
+
+```
+$ mkdir project && cd project
+$ python -m venv venv
+```
+
+For Windows Users:
+```
+$ venv\Scripts\activate
+```
+For Linux Users:
+```
+$ source venv/bin/activate
+```
+Then
+```
+$ git clone https://github.com/silvanajackoub/Student-Affairs-Website-Project.git && cd Student-Affairs-Website-Project
+$ pip install -r requirements.txt
+```
+<b>To test our web site here is a user name and password:</b></br>
+username: Silvana_Yacoub</br>
+password: 12345
+
+
+
