@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html> 
+<html lang="en" dir="ltr">  
+  <head> 
+    <meta charset="utf-8"> 
+    <title>Search</title>
+  </head> 
+  <link rel="icon" href="{% static 'images/fcai-logo.png'%}">
+  <link rel="stylesheet" href="{% static 'css/searchcss.css'%}">
+  <script src="{% static 'js/js_search.js'%}"></script>
+  <body>
+    <section class="search-box"> 
+      <label>SEARCH FOR A STUDENT BY THEIR NAME:</label>
+      <br>
+      <br>
+        <input type="hidden" name="res-url" value="{% url 'get_search' %}">
+        <input id="search-bar" type="text" name="search-query" value="" placeholder="Name">
+        <button type="submit" id="search-button">Search</button>
+    </section>
+
+    <input type="hidden" name="dept-url" value="{% url 'dept' %}">
+    {% if error %}
+        <input type="hidden" name="dept-fail" value="Student Does Not Exist or Ineligible">
+    {% endif %}
+    <main>
+        <table class="search-table"> 
+            <thead>
+                <tr> 
+                    <th>STUDENT NAME </th> 
+                    <th>STUDENT ID</th> 
+                    <th>YEAR</th>
+                    <th></th>
+                </tr> 
+            </thead>
+            <tbody>
+
+            </tbody> 
+        </table> 
+    </main>
+  </body> 
+</html>
+{% endblock content %}

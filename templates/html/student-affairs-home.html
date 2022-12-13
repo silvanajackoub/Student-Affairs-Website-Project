@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="{% static 'css/home-sign-up.css'%}">
+        <link rel="icon" href="{% static 'images/fcai-logo.png'%}">
+        <Title>Homepage</Title>
+        <script src="{% static 'js/js_index.js'%}"></script>
+    </head>
+    <body>
+        <section class="box">
+            {% if not user.is_authenticated %}
+                <img src="{% static 'images/fcai-logo.png'%}" alt="Logo" style="width: 300px">
+                <h1>FACULTY OF COMPUTERS AND ARTIFICIAL INTELLIGENCE</h1>
+                <h2><br>STUDENT AFFAIRS<br><br></h2>
+                <form method="post" id="login-form">
+                    {% csrf_token %}
+                    {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                            {% if message.tags == 'inv-user-pass error' %}<li class="error-field"> {{ message }} </li>{% endif %}
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    <input class="bar" name="username" type="text" placeholder=" Username" id="username-inp">
+                    <input class="bar" name="password" type="password" placeholder=" Password" id="pass-inp">
+                    <input class="submit" type="submit" value="Log In" id="login-button">
+                    <p>Don't have an account? <a href="{% url 'sign-up' %}">Sign up</a></p>
+                </form>
+            {% else %}
+                <img src="{% static 'images/fcai-logo.png'%}" alt="Logo" style="width: 300px">
+                <h1>FACULTY OF COMPUTERS AND ARTIFICIAL INTELLIGENCE</h1>
+                <h2>STUDENT AFFAIRS</h2><br>
+                <h2 id="user-greeting">Welcome, {{ user.username }}</h2><br>
+                <form method="post">
+                    <a class="submit2" href="{% url 'log-out' %}" type="submit" id="log-out-button">Log Out</a><br><br>
+                </form>
+            {% endif %}
+        </section>
+    </body>
+</html>
+{% endblock content %}

@@ -6,7 +6,7 @@ function ValidateName(nameP)
         return true;
     else
     {
-    alert('Full Name should be two or more space-seperated words');
+    alert('Please input alphabet characters only in the Name');
     return false;
     }
 }

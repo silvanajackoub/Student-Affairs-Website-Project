@@ -9,11 +9,16 @@
     </head>
     <body>
         <section class="box2">
+{#            <img src="{% static 'images/fcai-logo.png'%}" alt="Logo" style="width: 150px">#}
             <h1>Sign Up</h1>
             <form id="signup-form" method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
-
+{#                {% for field, error in form.errors.items %}#}
+{#                    <div class="error-field" role="alert">#}
+{#                    {{ error|striptags }}#}
+{#                    </div>#}
+{#                {% endfor %}#}
                 <input class="submit2" type="submit" value="Sign Up" id="signup-button">
             </form>
             <p>Have an account? <a href="{% url 'affairs-home' %}">Log in</a></p>
