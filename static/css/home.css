@@ -1,0 +1,448 @@
+body,html{
+    scroll-behavior: smooth;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+/*_________________________________________________________________________________________________________________________________________________________*/
+/*Main*/
+main{
+    background-image: url("../images/uni-blurred.jpg");
+    height: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    width: 100%;
+}
+main>div{
+    
+    height: 100%;
+    padding:0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+main>div>p{
+    height: 30%;
+    font-size: 100px;
+    margin: 5% 5% 2%;
+    display: inline-block;
+    color: white;
+
+}
+main>div>a{
+    display: block;
+    margin:0 5% 5%;
+    background-color: #132666;
+    border: #132666 1px solid;
+    color: white;
+    height: 50px;
+    width: 200px;
+    padding: 15px;
+    font-size: 35px;
+    text-decoration: none;
+}
+.mainpanels{
+    width: 300px;
+    height:150px;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+.mainpanels a{
+    background-color: #132666;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+    margin:15px auto;
+    width: 150px;
+}
+.leftmainpanel{
+    margin-left: 25%;
+}
+/*_________________________________________________________________________________________________________________________________________________________*/
+
+/*header 1*/
+header>div>span{
+    background-color: #132666;
+    color: white;
+    font-size: 18px;
+    display: inline-block;  
+    vertical-align: top; 
+    padding-top: 10px;
+    
+}
+header, header>div{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+header>div{
+    background-color: #132666;
+    display: inline-block;
+    margin: 0;
+}
+header>div>img{
+    width: 50px;
+    height: 40px;
+    
+}
+.fa{
+    padding: 10px;
+    font-size: 18px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px;
+    border-radius: 50px;
+    float: right;
+    color: white;
+    border: 1px solid white;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+header>div>button{
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+header>div>button>img{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
+/*_________________________________________________________________________________________________________________________________________________________*/
+
+/*header 2*/
+.faculty{
+    padding: 0;
+    margin: 0;
+    width: 59%;
+    display: inline;
+}
+.faculty h1{
+    margin: 10px;
+    padding: 10px;
+    color: #132666;
+    display: inline-block;
+    font-size: 50px;
+}
+.faculty img{
+    height:110px;
+    width: 110px;
+    margin-left: 50px;
+}
+.contact-conatiner{
+    margin: 0 0 0 21%;
+    height: 100%;
+    padding: 10px;
+    display: inline;
+    text-align:right;
+    vertical-align: top;
+}
+.contact{
+    color: #132666;
+    margin: 5px;
+    padding: 5px;
+    display: inline-block;
+    text-align: left;
+    width: 10%;
+    height: 100%;
+}
+.contact i{
+    float: left;
+    margin: 13px;
+    color: #132666;
+    border: #132666 1px solid;
+    font-size: 24px;
+    border-radius: 25px;
+    padding: 10px;
+}
+.contact p{
+    vertical-align: top;
+}
+.contact a{
+    color: blue;
+}
+
+/*_________________________________________________________________________________________________________________________________________________________*/
+
+/*Nav*/
+
+nav{
+
+    background-color: #132666;
+    text-align:center;
+    color: white;
+    height: 5%;
+}
+
+nav a{
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 24px;
+    height: 44%;
+    width: 15%;
+}
+nav>a:hover , main>div>a:hover , .mainpanels a:hover {
+    color: #d6e8ee;
+    background-color:#001b48;
+    cursor: pointer;
+}
+
+
+/*_________________________________________________________________________________________________________________________________________________________*/
+
+/*sections*/
+section{
+    width: 100%;
+    height: 80%;
+    opacity: 1;
+    transition: opacity 500ms;
+    padding: 20px;
+}
+section:nth-child(odd){
+    background-color: #132666;
+    color: white;
+}
+section:nth-child(even){
+    background-color: white;
+    color: #132666;
+}
+
+section.scrolled{
+    opacity: 1;
+}
+.sec{
+    background-color: #132666;
+    width: 25%;
+    height:100%;
+    border: #ffffff 3px solid;
+    display: inline-block;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 20px;
+    color: white;
+}
+.leftside{
+    margin-left: 25%;
+    float: left;
+    margin-right: 10px;
+    
+}
+.content{
+    height: 50%;
+    margin: 5% 0;
+}
+.sec img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 16px;
+}
+.sec a{
+    display: block;
+    width: 150px;
+    height: 35px;
+    margin:80px auto;
+    background-color: white;
+    padding: 10px;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #132666;
+    border-radius: 10px;
+}
+.sec a:hover{
+    background-color: azure;
+    color: #001b48;
+}
+.sec p{
+    margin:35px;
+}
+section h2{
+    width: 20%;
+    margin-top: 50px;
+    margin-left: 40%;
+    font-size: 40px;
+}
+/*_________________________________________________________________________________________________________________________________________________________*/
+
+/*vision and mission section*/
+
+.vismis{
+    height: 40%;
+}
+.white{
+    background-color: white;
+    color:#132666 ;
+}
+.vismis article{
+    border: #132666 1px solid;
+    font-size: 20px;
+}
+#vismis h2{
+    margin-top: 0;
+}
+/*_________________________________________________________________________________________________________________________________________________________*/
+
+/*Goals section*/
+.goals{
+    width: 12%;
+    height: 21%;
+    background-color: #132666;
+    color: white;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 30px 15px;
+    margin: 5px;
+    text-align: center;
+    font-size: 24px;
+    vertical-align: top;
+}
+#goals{
+    text-align: center;
+}
+
+/*_________________________________________________________________________________________________________________________________________________________*/
+
+/*values section*/
+.values
+{
+    background-color: #ffffff;
+    color: #132666;
+    border-radius: 50%;
+    width: 150px;
+    height: 170px;
+    display: inline-block;
+    padding: 60px 40px 0;
+    margin: 100px 10px 0;
+    text-align: center;
+    font-size: 24px;
+    vertical-align: top;
+}
+#values
+{
+    text-align: center;
+    padding-top: 80px;
+    height: 70%;
+}
+
+
+/*_________________________________________________________________________________________________________________________________________________________*/
+
+/*sidebar*/
+
+aside {
+    height: 100%;
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    overflow-x: hidden; 
+    transition: 0.5s; 
+    padding-top: 80px;
+    padding-bottom: 150px;
+  }
+  
+  aside a , aside h2, aside li{
+
+    color: white;
+    transition: 0.3s;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    display: block;
+    border: none;
+    background: none;
+    text-align: left;
+  }
+  aside a, aside li{
+    font-size: 20px;
+    cursor: pointer;
+  }
+  aside li{
+    margin-left: -45px;
+    border: #d6e8ee 1px solid;
+  }
+  aside>a{
+      font-size: 28px;
+  }
+  aside a:hover {
+    color: #d6e8ee;
+  }
+  
+  aside .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  aside h2{
+      position: absolute;
+      top:-12px;
+      left: -20px;
+
+  }
+  
+  .openbtn:hover {
+    background-color: #001b48;
+  }
+  
+  
+  #main {
+    transition: margin-left .5s; 
+  }
+
+/*_________________________________________________________________________________________________________________________________________________________*/
+
+/*footer*/
+footer{
+    background-color: #001b48;
+    color: white;
+    padding: 10px;
+}
+
+/*_________________________________________________________________________________________________________________________________________________________*/
+
+/*Transitions*/
+
+.reveal{
+    position: relative;
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.right
+{
+    transform: translateX(150px);
+}
+.left
+{
+    transform: translateX(-150px);
+}
+
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+
+  

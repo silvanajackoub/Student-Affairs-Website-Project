@@ -1,0 +1,132 @@
+body, html {
+  height: 100%;
+}
+html{
+    font-family: Arial, serif;
+}
+.main-nav {
+    background-color: #132666;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+a{
+    color: white;
+    cursor: pointer;
+}
+a:hover{
+    color: silver;
+}
+.nav-link{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: larger;
+    text-decoration: none;
+}
+#first-link{
+    padding-left: 10%;
+}
+  
+.container {
+	  border-radius: 500px;
+	  padding: 20px;
+	  margin-top:50px;
+	  margin-left:35%;
+	  font-size:18px;
+	  font-weight:bold;
+	  width   : 30%;
+	  height  : 20px;   
+	  position: relative;
+	  z-index : 1;
+	  background-color:  rgba(0,0,0,0.08);
+	  border-style:outset;
+	  border-color:#132666;
+	  border-width:2px;
+
+}
+form
+{
+  border-radius: 600px;
+  padding: 20px;
+  margin-left:35%;
+  margin-top:50px;
+  font-size:18px;
+  font-weight:bold;
+  border-style:outset;
+  border-color:#132666;
+  border-width:2px;
+  width  : 30%;
+  height  : 20px;   
+  position: relative;
+  z-index : 1;
+  background-color:  rgba(0,0,0,0.08);
+
+	 
+  
+
+}
+button {
+  display: inline-block;
+  background-color: #132666;
+  border-radius: 12px;
+  border: 4px double;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  width: 25%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top:30px;
+  margin-left: 38%;
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  font-weight:bold;
+}
+
+button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: silver;
+}
+
+button:hover span {
+  padding-right: 25px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+body{
+    background-color: white;
+}  
+#department{
+  height: 20px;
+  width: 300px;
+}
+section{
+  margin-top: 150px;
+}
+

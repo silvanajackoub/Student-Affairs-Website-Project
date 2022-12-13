@@ -1,0 +1,258 @@
+*{
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+    width: 99%;
+}
+html{
+    font-family: Arial, serif;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Navigation Bar*/
+
+.main-nav {
+    background-color: #132666;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+nav>a{
+    color: white;
+    cursor: pointer;
+}
+nav>a:hover{
+    color: #d6e8ee;
+}
+.nav-link{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: larger;
+    text-decoration: none;
+}
+#first-link{
+    padding-left: 10%;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Table*/
+
+tr,th,td{
+    border: #132666 1px solid;
+}
+th,td{
+    padding :20px;
+    margin : 20px;
+    text-align: center;
+}
+table{
+    border:solid 1px #132666;
+    width: 99%;
+    margin :10px;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.actions {
+    width :30%;
+    text-align: right;
+}
+.narrow{
+    width: 5%;
+}
+.name{
+    width:15%;
+}
+.wide{
+    width: 7%;
+}
+.button{
+    background-color: transparent;
+    border: none;
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Search Bar*/
+
+form.search input[type=text] {
+    margin-left: 10% ;
+    margin-right: 0;
+    margin-top: 100px;  
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid #132666;
+    float: left;
+    width: 60%;
+    background: #f1f1f1;
+}
+
+form.search button {
+    margin-right: 10%;  
+    margin-left: 0;
+    margin-top: 100px;
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #132666;
+    color: white;
+    font-size: 17px;
+    border: 1px solid #132666;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.search button:hover, .searchsubmit:hover {
+    background: #001b48;
+}
+
+.searchoptionsform{
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+.searchoptions{
+    margin: 10px;
+    display: inline;
+}
+#filter,#sort{
+    border-color: #132666;
+    padding: 10px;
+    width: 200px;
+    margin:20px;
+}
+.searchsubmit{
+    width: 130px;
+    height: 45px;
+    background-color: #132666;
+    color: white ;
+    font-weight: bold;
+    border: #132666;
+}
+.button:hover{
+    cursor: pointer;
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Update Form*/
+.form-popup {
+    display: none;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #f1f1f1;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.form-container {
+    padding: 10px;
+    background-color: white;
+    width: 40%;
+    height: 80%;
+    position: fixed;
+    bottom: 10%;
+    right: 30%;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+.form-container button {
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    background-color: #132666;
+}
+
+.form-container button:hover {
+    opacity: 1;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.form-popup select
+{
+    width: 99%;
+    padding: 10px;
+    margin: 10px;
+    display: block;
+}
