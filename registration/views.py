@@ -8,7 +8,6 @@ from django.forms.utils import ErrorList
 from django.http import JsonResponse, HttpResponse
 from django.core.mail import send_mail
 
-
 # For default page ----> home page
 def home(request):
     return render(request, 'index.html')
