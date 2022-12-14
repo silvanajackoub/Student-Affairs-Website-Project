@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 
+
 urlpatterns = [
     # pages of the website
     path('', views.home, name='home'),  # for the home page --> Default page when we run the server
