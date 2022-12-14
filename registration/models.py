@@ -13,6 +13,7 @@ class AddStudent(models.Model):
            ('AI', 'AI'), ('IS', 'IS')
            ]
 
+
     # student full name
     FullName = models.CharField(max_length=200)
     # student id (primary key)
@@ -33,6 +34,7 @@ class AddStudent(models.Model):
     class Meta:
         verbose_name = 'Student'
         ordering = ['FullName']
+
 
 
 # DB Model that stores the feedback from the contact us page
