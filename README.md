@@ -61,5 +61,40 @@ $ pip install -r requirements.txt
 username: Silvana_Yacoub</br>
 password: 12345
 
+## Screenshots
 
+#### Homepage
+
+![Homepage](https://user-images.githubusercontent.com/78499278/207459589-6af1e5d0-e938-4f13-afbe-78c2dfe3be09.jpg)
+
+<hr>
+
+#### Login Page
+
+![sign in](https://user-images.githubusercontent.com/78499278/207459755-1f037b2e-aeb8-4cf1-872a-d4b2a1c0a49b.jpg)
+
+<hr>
+
+#### Student Registeration Page
+
+![registeration](https://user-images.githubusercontent.com/78499278/207459862-5a2cec5a-0c8d-4609-9661-da0cb4cc5ebd.jpg)
+
+<hr>
+
+#### Student Edit-Delete Page
+
+![edit-delete](https://user-images.githubusercontent.com/78499278/207459873-e07ffe51-3ec8-4a2a-bf34-77337b606d33.jpg)
+
+#### Student Search Page
+
+![search](https://user-images.githubusercontent.com/78499278/207459889-884a5485-2a38-4fbe-addd-7ebac58494c3.jpg)
+
+<hr>
+
+#### Contact Us Page
+
+![contact us](https://user-images.githubusercontent.com/78499278/207459907-e7133e97-8b96-4a92-8096-d55ac98a4b54.jpg)
+
+
+<hr>
 
