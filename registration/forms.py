@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 import re
 
 
+
 # A form for the signup page
 class NewUserForm(UserCreationForm):
     # formatting the classes of the form and its fields
